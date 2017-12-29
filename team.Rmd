@@ -1,0 +1,14 @@
+---
+title: "Team"
+output:
+  html_document:
+    toc_float: false
+---
+
+This study is led by Dr. Eric Green. [Green](https://globalhealth.duke.edu/people/faculty/green-eric) is on the faculty at Duke University in the Duke Global Health Institute.
+
+The study team is advised by 
+
+Research support is provided by 
+
+The following individuals made important contributions to the study: 

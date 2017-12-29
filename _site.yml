@@ -1,0 +1,36 @@
+name: Developing and validating a perinatal depression screening tool in Kenya
+output_dir: '.'
+navbar:
+  title: PDEPS
+  type: inverse
+  left:
+  - text: Home
+    href: index.html
+  - text: Overview
+    href: overview.html
+  - text: Team
+    href: team.html
+  - text: Data and Code
+    href: data.html
+  - text: Papers
+    menu:
+    - text: PDEPS
+      href: jad.html
+  right:
+  - icon: fa-envelope-o
+    href: mailto:eric.green@duke.edu
+  - icon: fa-github
+    href: https://github.com/ericpgreen/pdeps
+output:
+  html_document:
+    theme: yeti
+    highlight: tango
+    fig_caption: yes
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+    css: styles.css
+    lib_dir: site_libs
+    self_contained: no
+

@@ -1,0 +1,21 @@
+---
+title: "Developing and validating a perinatal depression screening tool in Kenya blending Western criteria with local idioms: A mixed methods study"
+output:
+  html_document:
+    toc: false
+    toc_float: false
+bibliography: peridep.bib
+csl: vancouver.csl
+---
+
+*In 2015, our team of researchers from Duke University, Moi University, and the Moi Teaching and Referral Hospital began a pilot study funded by the Duke Global Health Institute to develop and validate a perinatal depression screening tool in Kenya. We created this study website to store all study-related products and data (licensed under the [CC-BY license](https://creativecommons.org/licenses/by/4.0/)). New material will be released as academic manuscripts enter production.*
+
+* * * 
+
+Depression is a leading cause of disability worldwide, yet access to timely assessment and treatment is very limited in many low-income settings, especially in rural communities. Depression affects men and women, young and old, but women who experience depression during pregnancy or in the year after childbirth are a particularly underserved population. The prevalence of perinatal depression among women living in poor countries ranges widely, possibly exceeding 30 percent in rural settings [@Villegas:2011]. 
+
+Depression among pregnant women and new mothers has been linked to increased maternal morbidity and mortality [@Oates:2003;@khalifeh:2016], poor infant health [@Field:2004;@rahman:2016;@grigoriadis:2013;@surkan:2016;@gelaye:2016], and poor early childhood outcomes---such as developmental, cognitive, and emotional delays [@Beck:1998;@junge:2017;@gentile:2017]---making it a significant public health concern. Few public health systems currently have the resources to treat perinatal depression, but recent work has shown that cognitive behavioral interventions delivered by lay health workers are efficacious [@Rahman:2008;@joshi:2014]. Before such treatments can be delivered at scale, however, it is essential to overcome many barriers, including barriers to screening for depression. 
+
+Routine screening for perinatal depression is not common in most primary health care settings. The U.S. Preventive Services Task Force only recently updated their recommendation on depression screening to specifically recommend screening during the pre- and postpartum periods [@Siu:2016]. While practitioners in high-income countries can respond to this new recommendation by implementing one of several existing depression screening tools developed in Western contexts, such as the Edinburgh Postnatal Depression Scale (EPDS) or the Patient Health Questionnaire-9 (PHQ-9), these tools lack strong evidence of cross-cultural equivalence, validity for case finding, and precision in measuring response to treatment in developing countries [@Sweetland:2014;@Tsai:2013]. Thus, there is a critical need to develop and validate new screening tools for perinatal depression that can be used by lay health workers, primary health care personnel, and patients. Our study contributes to this effort by attempting to validate the EPDS and PHQ-9 in rural Kenya, while at the same time developing and validating a new instrument that blends items from existing screening tools with local idioms of distress [@Kohrt:2011].
+
+# References

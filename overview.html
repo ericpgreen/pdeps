@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Developing and validating a perinatal depression screening tool in Kenya blending Western criteria with local idioms: A mixed methods study</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">PDEPS</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="overview.html">Overview</a>
+</li>
+<li>
+  <a href="team.html">Team</a>
+</li>
+<li>
+  <a href="data.html">Data and Code</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Papers
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="jad.html">PDEPS</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:eric.green@duke.edu">
+    <span class="fa fa-envelope-o"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/ericpgreen/pdeps">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Developing and validating a perinatal depression screening tool in Kenya blending Western criteria with local idioms: A mixed methods study</h1>
+
+</div>
+
+
+<p><em>In 2015, our team of researchers from Duke University, Moi University, and the Moi Teaching and Referral Hospital began a pilot study funded by the Duke Global Health Institute to develop and validate a perinatal depression screening tool in Kenya. We created this study website to store all study-related products and data (licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY license</a>). New material will be released as academic manuscripts enter production.</em></p>
+<hr />
+<p>Depression is a leading cause of disability worldwide, yet access to timely assessment and treatment is very limited in many low-income settings, especially in rural communities. Depression affects men and women, young and old, but women who experience depression during pregnancy or in the year after childbirth are a particularly underserved population. The prevalence of perinatal depression among women living in poor countries ranges widely, possibly exceeding 30 percent in rural settings <span class="citation" data-cites="Villegas:2011">[1]</span>.</p>
+<p>Depression among pregnant women and new mothers has been linked to increased maternal morbidity and mortality <span class="citation" data-cites="Oates:2003 khalifeh:2016">[2,3]</span>, poor infant health <span class="citation" data-cites="Field:2004 rahman:2016 grigoriadis:2013 surkan:2016 gelaye:2016">[4–8]</span>, and poor early childhood outcomes—such as developmental, cognitive, and emotional delays <span class="citation" data-cites="Beck:1998 junge:2017 gentile:2017">[9–11]</span>—making it a significant public health concern. Few public health systems currently have the resources to treat perinatal depression, but recent work has shown that cognitive behavioral interventions delivered by lay health workers are efficacious <span class="citation" data-cites="Rahman:2008 joshi:2014">[12,13]</span>. Before such treatments can be delivered at scale, however, it is essential to overcome many barriers, including barriers to screening for depression.</p>
+<p>Routine screening for perinatal depression is not common in most primary health care settings. The U.S. Preventive Services Task Force only recently updated their recommendation on depression screening to specifically recommend screening during the pre- and postpartum periods <span class="citation" data-cites="Siu:2016">[14]</span>. While practitioners in high-income countries can respond to this new recommendation by implementing one of several existing depression screening tools developed in Western contexts, such as the Edinburgh Postnatal Depression Scale (EPDS) or the Patient Health Questionnaire-9 (PHQ-9), these tools lack strong evidence of cross-cultural equivalence, validity for case finding, and precision in measuring response to treatment in developing countries <span class="citation" data-cites="Sweetland:2014 Tsai:2013">[15,16]</span>. Thus, there is a critical need to develop and validate new screening tools for perinatal depression that can be used by lay health workers, primary health care personnel, and patients. Our study contributes to this effort by attempting to validate the EPDS and PHQ-9 in rural Kenya, while at the same time developing and validating a new instrument that blends items from existing screening tools with local idioms of distress <span class="citation" data-cites="Kohrt:2011">[17]</span>.</p>
+<section id="references" class="level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-Villegas:2011">
+<p>[1] Villegas L, McKay K, Dennis C-L, Ross LE. Postpartum depression among rural women from developed and developing countries: A systematic review. The Journal of Rural Health 2011;27:278–88.</p>
+</div>
+<div id="ref-Oates:2003">
+<p>[2] Oates M. Perinatal psychiatric disorders: A leading cause of maternal morbidity and mortality. British Medical Bulletin 2003;67:219–29.</p>
+</div>
+<div id="ref-khalifeh:2016">
+<p>[3] Khalifeh H, Hunt IM, Appleby L, Howard LM. Suicide in perinatal and non-perinatal women in contact with psychiatric services: 15 year findings from a uk national inquiry. The Lancet Psychiatry 2016;3:233–42.</p>
+</div>
+<div id="ref-Field:2004">
+<p>[4] Field T, Diego M, Dieter J, Hernandez-Reif M, Schanberg S, Kuhn C, et al. Prenatal depression effects on the fetus and the newborn. Infant Behavior and Development 2004;27:216–29.</p>
+</div>
+<div id="ref-rahman:2016">
+<p>[5] Rahman A, Hafeez A, Bilal R, Sikander S, Malik A, Minhas F, et al. The impact of perinatal depression on exclusive breastfeeding: A cohort study. Maternal &amp; Child Nutrition 2016;12:452–62.</p>
+</div>
+<div id="ref-grigoriadis:2013">
+<p>[6] Grigoriadis S, VonderPorten EH, Mamisashvili L, Tomlinson G, Dennis C-L, Koren G, et al. The impact of maternal depression during pregnancy on perinatal outcomes: A systematic review and meta-analysis. Journal of Clinical Psychiatry 2013;74:e321–41.</p>
+</div>
+<div id="ref-surkan:2016">
+<p>[7] Surkan PJ, Patel SA, Rahman A. Preventing infant and child morbidity and mortality due to maternal depression. Best Practice &amp; Research Clinical Obstetrics &amp; Gynaecology 2016;36:156–68.</p>
+</div>
+<div id="ref-gelaye:2016">
+<p>[8] Gelaye B, Rondon MB, Araya R, Williams MA. Epidemiology of maternal depression, risk factors, and child outcomes in low-income and middle-income countries. The Lancet Psychiatry 2016;3:973–82.</p>
+</div>
+<div id="ref-Beck:1998">
+<p>[9] Beck CT. The effects of postpartum depression on child development: A meta-analysis. Archives of Psychiatric Nursing 1998;12:12–20.</p>
+</div>
+<div id="ref-junge:2017">
+<p>[10] Junge C, Garthus-Niegel S, Slinning K, Polte C, Simonsen TB, Eberhard-Gran M. The impact of perinatal depression on children’s social-emotional development: A longitudinal study. Maternal and Child Health Journal 2017;21:607–15.</p>
+</div>
+<div id="ref-gentile:2017">
+<p>[11] Gentile S. Untreated depression during pregnancy: Short-and long-term effects in offspring. A systematic review. Neuroscience 2017;342:154–66.</p>
+</div>
+<div id="ref-Rahman:2008">
+<p>[12] Rahman A, Malik A, Sikander S, Roberts C, Creed F. Cognitive behaviour therapy-based intervention by community health workers for mothers with depression and their infants in rural pakistan: A cluster-randomised controlled trial. The Lancet 2008;372:902–9.</p>
+</div>
+<div id="ref-joshi:2014">
+<p>[13] Joshi R, Alim M, Kengne AP, Jan S, Maulik PK, Peiris D, et al. Task shifting for non-communicable disease management in low and middle income countries–a systematic review. PloS One 2014;9:e103754.</p>
+</div>
+<div id="ref-Siu:2016">
+<p>[14] Albert L. Siu, the US Preventive Services Task Force. Screening for depression in adults: US preventive services task force recommendation statement. JAMA 2016;315:380–7.</p>
+</div>
+<div id="ref-Sweetland:2014">
+<p>[15] Sweetland AC, Belkin GS, Verdeli H. Measuring depression and anxiety in sub-saharan africa. Depression and Anxiety 2014;31:223–32.</p>
+</div>
+<div id="ref-Tsai:2013">
+<p>[16] Tsai AC, Scott JA, Hung KJ, Zhu JQ, Matthews LT, Psaros C, et al. Reliability and validity of instruments for assessing perinatal depression in african settings: Systematic review and meta-analysis. PLoSOne 2013;8:e82521.</p>
+</div>
+<div id="ref-Kohrt:2011">
+<p>[17] Kohrt BA, Jordans MJ, Tol WA, Luitel NP, Maharjan SM, Upadhaya N. Validation of cross-cultural child mental health and psychosocial research instruments: Adapting the depression self-rating scale and child PTSD symptom scale in nepal. BMC Psychiatry 2011;11:127.</p>
+</div>
+</div>
+</section>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

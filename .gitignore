@@ -2,5 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
-
-index.Rmd
+packrat/lib*/
+packrat/src/

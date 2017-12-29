@@ -1,0 +1,25 @@
+\begin{table}
+%\rotatebox[origin=c]{90}{
+%\scalebox{.9}{
+  \centerline{\begin{threeparttable}
+  \caption{Regression of depression severity score on indicator of automated phone administration}
+  \label{tbl:phone}
+  \centering
+  \begin{tabular}{lllllll}
+  \toprule
+  & \multicolumn{1}{c}{Enumerator} & \multicolumn{5}{c}{Automated phone} \\
+  \cmidrule(lr){2-2} \cmidrule(lr){3-7}
+  Scale & Mean & Est & StdErr & \% Diff & \textit{t} & \textit{p} \\
+  \midrule
+  \expandableinput ../../master/output/tables/phone.tex
+  \bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+  \small
+  \item Note. Women were randomized to complete a re-test survey with the same enumerator who read the questions and recorded responses (same method as the first administration) or via an automated phone screening.
+  \end{tablenotes}
+  \end{threeparttable}%}\hspace{4cm}
+}
+\end{table}
+
+

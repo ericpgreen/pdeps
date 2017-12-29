@@ -1,0 +1,26 @@
+\begin{table}
+\rotatebox[origin=c]{90}{
+%\scalebox{.9}{
+  \centerline{\begin{threeparttable}
+  \caption{PDEPS item statistics}
+  \label{tbl:itemstats}
+  \centering
+  \begin{tabular}{llcccccc}
+  \toprule
+  & & \multicolumn{2}{c}{DSM-5} & \multicolumn{2}{c}{Local} & & \\
+  \cmidrule(lr){3-4} \cmidrule(lr){5-6}
+  & & \multicolumn{1}{c}{Non-case} & \multicolumn{1}{c}{Case} & \multicolumn{1}{c}{Non-case} & \multicolumn{1}{c}{Case} & & \multicolumn{1}{c}{Weighted} \\
+  Item & Short label & Mean (SD) & Mean (SD) & Mean (SD) & Mean (SD) & Item-Total & \multicolumn{1}{c}{Kappa} \\
+  \midrule
+  \expandableinput ../../master/output/tables/itemStats.tex
+  \bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+  \small
+  \item Note. Weighted kappa is reported here as a measure of test-retest reliability at the item-level. Typically the kappa statistic is framed as a measure of inter-rater reliability. For test-retest reliability, an individual woman is the rater at two time points. Since women were responding on an ordinal scale, we calculated weighted kappa to better reflect the degree of agreement or disagreement between time 1 and time 2 (enumerator administration only).
+  \end{tablenotes}
+  \end{threeparttable}}\hspace{4cm}
+}
+\end{table}
+
+

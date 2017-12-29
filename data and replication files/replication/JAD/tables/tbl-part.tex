@@ -1,0 +1,29 @@
+\begin{table}
+\scalebox{.75}{
+  \begin{threeparttable}
+  \caption{Participant characteristics by maternal status and caseness}
+  \label{tbl:part}
+  %\centering
+  \begin{tabular}{lllllllll}
+  \toprule
+  & \multicolumn{3}{c}{Non-cases} & \multicolumn{3}{c}{Cases} & \\
+  \cmidrule(lr){2-4} \cmidrule(lr){5-7}
+  Case Definition/Characteristic & Pregnant & Postpartum & Both & Pregnant & Postpartum & Both & All \\
+  \midrule
+  \textit{DSM-5 Diagnosis$\dagger$} & & & & & & & \\
+  \expandableinput ../../master/output/tables/part.tex
+  \midrule
+  \textit{Local, Counselor-Client Concordance} & & & & & & & \\
+  \expandableinput ../../master/output/tables/part2.tex
+  \midrule
+  \textit{Local, Counselor Only} & & & & & & & \\
+  \expandableinput ../../master/output/tables/part3.tex
+  \bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+  \small
+  \item Note. $\dagger$ Major Depressive Episode or Other specified depressive disorder.
+  \end{tablenotes}
+  \end{threeparttable}
+}
+\end{table}

@@ -1,0 +1,21 @@
+\begin{table}[H]
+%\rotatebox[origin=c]{90}{
+\scalebox{1}{
+  \centerline{\begin{threeparttable}
+  \caption{Diagnostic results by maternal status}
+  \label{tbl:diagnostic}
+  \centering
+  \begin{tabular}{lllll}
+  \toprule
+  Classifications & \multicolumn{1}{p{1.5cm}}{\centering Pregnant \\ \textit{n}=\Sexpr{pregN}} & \multicolumn{1}{p{1.5cm}}{\centering Postpartum \\ \textit{n}=\Sexpr{ppN}} & \multicolumn{1}{p{1.5cm}}{\centering All \\ \textit{n}=\Sexpr{pregN + ppN}} \\
+  \midrule
+  \expandableinput ../../master/output/tables/part5.tex
+  \bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+  \small
+  \item 
+  \end{tablenotes}
+  \end{threeparttable}}%}\hspace{3cm}
+}
+\end{table}

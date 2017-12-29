@@ -1,0 +1,32 @@
+\begin{table}
+\rotatebox[origin=c]{90}{
+%\scalebox{.9}{
+  \centerline{\begin{threeparttable}
+  \caption{Diagnostic validity}
+  \label{tbl:dv}
+  \centering
+  \begin{tabular}{llllllllllllll}
+  \toprule
+  & & \multicolumn{6}{c}{DSM-5} & \multicolumn{6}{c}{Local} \\
+  \cmidrule(lr){3-8} \cmidrule(lr){9-14}
+  Scale & Cut & Sen & Spe & Acc & LRP & LRN & AUC & Sen & Spe & Acc & LRP & LRN & AUC \\
+  \midrule
+  \textit{Combined, N=\Sexpr{pregN+ppN}} & & & & & & & & & & & & & \\
+  \expandableinput ../../master/output/tables/dv.tex
+  \midrule
+  \textit{Pregnant, n=\Sexpr{pregN}} & & & & & & & & & & & & & \\
+  \expandableinput ../../master/output/tables/dvPr.tex
+  \midrule
+  \textit{Postpartum, n=\Sexpr{ppN}} & & & & & & & & & & & & & \\
+  \expandableinput ../../master/output/tables/dvPp.tex
+  \bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+  \small
+  \item Note. Sen=sensitivity. Spe=specificity. Acc=accuracy (1-error rate). LRP=likelihood ratio (positive). LRN=likelihood radio (negative). AUC=area under the receiver operating characteristic curve.
+  \end{tablenotes}
+  \end{threeparttable}}\hspace{4cm}
+}
+\end{table}
+
+

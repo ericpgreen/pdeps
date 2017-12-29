@@ -1,0 +1,23 @@
+\begin{table}[H]
+\rotatebox[origin=c]{90}{
+\scalebox{1}{
+  \centerline{\begin{threeparttable}
+  \caption{Participant characteristics by maternal status}
+  \label{tbl:partSimple}
+  \centering
+  \begin{tabular}{lllllll}
+  \toprule
+  & \multicolumn{3}{c}{Sample} & \multicolumn{2}{c}{Kenya} & \\
+  \cmidrule(lr){2-4} \cmidrule(lr){5-6}
+  Characteristic & \multicolumn{1}{p{1.5cm}}{\centering Pregnant \\ \textit{n}=\Sexpr{pregN}} & \multicolumn{1}{p{1.5cm}}{\centering Postpartum \\ \textit{n}=\Sexpr{ppN}} & \multicolumn{1}{p{1.5cm}}{\centering All \\ \textit{n}=\Sexpr{pregN + ppN}} & Estimate & \multicolumn{1}{c}{Reference} \\
+  \midrule
+  \expandableinput ../../master/output/tables/part4.tex
+  \bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+  \small
+  \item 
+  \end{tablenotes}
+  \end{threeparttable}}}\hspace{3cm}
+}
+\end{table}

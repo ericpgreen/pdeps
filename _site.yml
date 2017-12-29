@@ -12,12 +12,15 @@ navbar:
     href: team.html
   - text: Methods
     href: methods.html
-  - text: Data and Code
-    href: data.html
   - text: Papers
     menu:
     - text: PDEPS
       href: jad.html
+  - text: Data and Code
+    href: "https://github.com/ericpgreen/pdeps/tree/master/data%20and%20replication%20files"
+    icon: fa-external-link
+  - text: PDEPS
+    href: pdeps.html
   right:
   - icon: fa-envelope-o
     href: mailto:eric.green@duke.edu

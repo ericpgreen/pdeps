@@ -1,0 +1,25 @@
+---
+title: "Developing and validating a perinatal depression screening tool in Kenya blending Western criteria with local idioms: A mixed methods study"
+output:
+  html_document:
+    toc_float: true
+---
+
+# Metadata
+
+```{r, echo=FALSE}
+  tbl <- data.frame(Element=c("Paper Citation", 
+                              "Journal Copy", 
+                              "Pre-Print", 
+                              "Data Citation"),
+                    Details=c("Green, E.P., Tuli, H., Kwobah, E., Menya, D., Chesire, I., & Schmidt, C. (in press). Developing and validating a perinatal depression screening tool in Kenya blending Western criteria with local idioms: A mixed methods study. *Journal of Affective Disorders*. doi: 10.1016/j.jad.2017.11.027",
+                              "[Journal of Affective Disorders](http://www.jad-journal.com/article/S0165-0327(17)30263-X/abstract)",
+                              "Pending",
+                              "Green, E.P. (2017). PDEPS data repository. [![DOI](https://zenodo.org/badge/115718962.svg)](https://zenodo.org/badge/latestdoi/115718962)"))
+
+tbl %>%
+  kable("html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", 
+                                      "condensed", "responsive")) %>%
+  column_spec(1, width = "10em")
+```

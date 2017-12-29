@@ -10,6 +10,8 @@ navbar:
     href: overview.html
   - text: Team
     href: team.html
+  - text: Methods
+    href: methods.html
   - text: Data and Code
     href: data.html
   - text: Papers

@@ -5,10 +5,6 @@ output:
     toc_float: false
 ---
 
-This study is led by Dr. Eric Green. [Green](https://globalhealth.duke.edu/people/faculty/green-eric) is on the faculty at Duke University in the Duke Global Health Institute.
+This study was led by Dr. Eric Green. [Green](https://globalhealth.duke.edu/people/faculty/green-eric) is on the faculty at Duke University in the Duke Global Health Institute. Collaborators included Dr. Edith Kwobah (Moi Teaching and Referral Hospital), Dr. Diana Menya (Moi University), Dr. Irene Chesire (Moi University), and former Duke University students Hawa Tuli and Christina Schmidt.
 
-The study team is advised by 
-
-Research support is provided by 
-
-The following individuals made important contributions to the study: 
+The following individuals made important contributions to the study: Sarah Yussef, Hassan Yussef, Caroline Khwituta, Teresa Kangogo, Mary Ogina, Medina Nyongesa, Eileen Mukonye, Alice Seurey, Maximilla Chivinh, and Everline Walutila.

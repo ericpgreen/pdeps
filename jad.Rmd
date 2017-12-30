@@ -14,7 +14,7 @@ csl: vancouver.csl
                               "Journal Copy", 
                               "Pre-Print", 
                               "Data Citation"),
-                    Details=c("Green, E.P., Tuli, H., Kwobah, E., Menya, D., Chesire, I., & Schmidt, C. (in press). Developing and validating a perinatal depression screening tool in Kenya blending Western criteria with local idioms: A mixed methods study. *Journal of Affective Disorders*. doi: 10.1016/j.jad.2017.11.027",
+                    Details=c("Green, E.P., Tuli, H., Kwobah, E., Menya, D., Chesire, I., & Schmidt, C. (2018). Developing and validating a perinatal depression screening tool in Kenya blending Western criteria with local idioms: A mixed methods study. *Journal of Affective Disorders, 228*, 49-59. doi: 10.1016/j.jad.2017.11.027",
                               "[Journal of Affective Disorders](http://www.jad-journal.com/article/S0165-0327(17)30263-X/abstract)",
                               "[PDF](https://github.com/ericpgreen/pdeps/raw/master/data%20and%20replication%20files/replication/JAD/manuscript.pdf)",
                               "Green, E.P. (2017). PDEPS data repository. [![DOI](https://zenodo.org/badge/115718962.svg)](https://zenodo.org/badge/latestdoi/115718962)"))

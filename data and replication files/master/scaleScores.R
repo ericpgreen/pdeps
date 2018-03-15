@@ -73,34 +73,34 @@
       scale <- tmp[,items]
     # plot responses 
     # TODO -- FOLLOWING IS NOT REQUIRED AND IS NOT WORKING FOR EPDS
-      # add back dropped levels
-        levellist <- list()
-        maxlevels <- list()
-        for (i in 1:length(scale)) {
-          levellist[[i]] <- list(attributes(scale[, i])$levels)
-          maxlevels[[i]] <- length(attributes(scale[, i])$levels)
-        }
-        indexLevel <-
-          min(which((unlist(maxlevels)==max(unlist(maxlevels)))==TRUE))
-        levels <- unlist(levellist[indexLevel])
-        scale[] <- lapply(scale, `levels<-`, levels)
+      # # add back dropped levels
+      #   levellist <- list()
+      #   maxlevels <- list()
+      #   for (i in 1:length(scale)) {
+      #     levellist[[i]] <- list(attributes(scale[, i])$levels)
+      #     maxlevels[[i]] <- length(attributes(scale[, i])$levels)
+      #   }
+      #   indexLevel <-
+      #     min(which((unlist(maxlevels)==max(unlist(maxlevels)))==TRUE))
+      #   levels <- unlist(levellist[indexLevel])
+      #   scale[] <- lapply(scale, `levels<-`, levels)
       # plot
-        like <- likert(scale)
-        summary(like)
+        # like <- likert(scale)
+        # summary(like)
         # dghi colors
         orange <- "#f09906"
         blue <- "#04598fff"
         green <- "#849a0bff"
         darkgrey <- "#888888ff"
         red <- "#cc4125"
-        p <- plot(like, low.color=blue, high.color=green, 
-                  neutral.color="grey90", text.size=1.75) +
-          theme(axis.text.y=element_text(colour=darkgrey, size=7),
-                strip.text=element_text(colour="black", size=10)) 
-        plot_list[[s]] = p
-        #remove(levels)
-        remove(like)
-        remove(p)
+        # p <- plot(like, low.color=blue, high.color=green, 
+        #           neutral.color="grey90", text.size=1.75) +
+        #   theme(axis.text.y=element_text(colour=darkgrey, size=7),
+        #         strip.text=element_text(colour="black", size=10)) 
+        # plot_list[[s]] = p
+        # #remove(levels)
+        # remove(like)
+        # remove(p)
     # convert factor to numeric using levels
       scale <- as.data.frame(sapply(scale, 
                                     function(x) as.numeric(levels(x))[x]))

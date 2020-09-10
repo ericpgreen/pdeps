@@ -9,7 +9,7 @@ output:
   library(knitr)
   library(kableExtra)
   library(magrittr)
-  library(xlsx)
+  #library(xlsx)
   library(tidyverse)
 ```
 

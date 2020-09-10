@@ -54,3 +54,6 @@ tbl %>%
                                       "condensed", "responsive"))
 ```
 
+[Formatted version](https://docs.google.com/document/d/e/2PACX-1vQ1Vyj5pZyt0410KFb5gKLHX8-9-r5naWzxgC1qr795GcDEPhd4_dnnr7hBVtMfpLMGEd0fPh7OvC-f/pub) / [Editable version](https://docs.google.com/document/d/1Aq1qk1SLU_2M1Fhkxp4_eTTTo2IH2ZfLPubxqF7llGE/edit?usp=sharing)
+
+

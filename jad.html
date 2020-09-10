@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -23,7 +23,11 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 
 
@@ -55,11 +59,9 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -73,13 +75,18 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -95,7 +102,6 @@ body {
   padding-top: 50px;
   margin-top: -50px;
 }
-
 .section h2 {
   padding-top: 50px;
   margin-top: -50px;
@@ -115,6 +121,43 @@ body {
 .section h6 {
   padding-top: 50px;
   margin-top: -50px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -136,47 +179,66 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
-
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -190,6 +252,12 @@ $(document).ready(function ()  {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -225,8 +293,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -235,6 +301,16 @@ div.tocify {
 
 
 </style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
@@ -322,7 +398,7 @@ div.tocify {
 </div>
 
 
-<section id="metadata" class="level1">
+<div id="metadata" class="section level1">
 <h1>Metadata</h1>
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -370,25 +446,25 @@ Green, E.P. (2017). PDEPS data repository. <a href="https://zenodo.org/badge/lat
 </tr>
 </tbody>
 </table>
-</section>
-<section id="summary" class="level1">
+</div>
+<div id="summary" class="section level1">
 <h1>Summary</h1>
 <p>The EPDS and PHQ-9 are valid and reliable screening tools for perinatal depression in rural Western Kenya, but a new 9-item locally-developed tool called the Perinatal Depression Screening (PDEPS) that blends Western psychiatric concepts and local idioms of distress may be a more useful alternative. At less than 10 percent, the prevalence of depression in this region appears to be lower than other published estimates for African and other low-income countries. Additional research is needed to confirm this finding and to explore how to implement depression screening at scale, potentially through mobile phones and automated voice services. Additional research is also needed to develop and validate instruments for co-morbid symptoms of anxiety during the perinatal period.</p>
-</section>
-<section id="key-take-aways" class="level1">
+</div>
+<div id="key-take-aways" class="section level1">
 <h1>Key Take-Aways</h1>
-<p>This study demonstrates that the EPDS and PHQ-9 screening tools have acceptable sensitivity and specificity for detecting major depressive episode (DSM-5) among pregnant women and new mothers in Kenya. The EPDS diagnostic validity results are at the low end of what is reported in other studies of African samples, and our recommended cutoff of <span class="math inline">\(\geq\)</span> 14 is notably higher that what these other studies report (see Tsai et al. <span class="citation" data-cites="Tsai:2013">[1]</span> and Table A8 <a href="https://www.sciencedirect.com/science/MiamiMultiMediaURL/1-s2.0-S016503271730263X/1-s2.0-S016503271730263X-mmc1.pdf/271035/html/S016503271730263X/be8563ea377bdaa094ee8e1728e4e95c/mmc1.pdf">Online Appendix</a>) in the Online Appendix), but our results confirm that the EPDS and PHQ-9 are valid instruments for this setting. They may not be not optimal, however.</p>
+<p>This study demonstrates that the EPDS and PHQ-9 screening tools have acceptable sensitivity and specificity for detecting major depressive episode (DSM-5) among pregnant women and new mothers in Kenya. The EPDS diagnostic validity results are at the low end of what is reported in other studies of African samples, and our recommended cutoff of <span class="math inline">\(\geq\)</span> 14 is notably higher that what these other studies report (see Tsai et al. <span class="citation">[1]</span> and Table A8 <a href="https://www.sciencedirect.com/science/MiamiMultiMediaURL/1-s2.0-S016503271730263X/1-s2.0-S016503271730263X-mmc1.pdf/271035/html/S016503271730263X/be8563ea377bdaa094ee8e1728e4e95c/mmc1.pdf">Online Appendix</a>) in the Online Appendix), but our results confirm that the EPDS and PHQ-9 are valid instruments for this setting. They may not be not optimal, however.</p>
 <p>The new scale we developed through a process of free listing, card sorting, and item analysis—the Perinatal Depression Screening, or PDEPS—performs better on all metrics of classification accuracy with respect to DSM-5 caseness. We recruited too few pregnant women to make strong conclusions about the diagnostic validity of the PDEPS with respect to detecting depression during the antenatal period, but overall classification accuracy was high. Our postpartum sample was twice as large, however, and results suggest that the PDEPS outperforms the EPDS and PHQ-9 in terms of diagnostic accuracy during this period.</p>
-<p>We developed the PDEPS through a hybrid emic and etic approach that blended Western psychiatric concepts with locally derived idioms of distress. This work drew inspiration from several previous studies that took a similar approach to combining Western and indigenous concepts <span class="citation" data-cites="Bass:2008 Kaaya:2008 Nhiwatiwa:1998 Patel:1997">[2–5]</span>. In particular, we can compare our results to Bass et al. <span class="citation" data-cites="Bass:2008">[2]</span> who used similar methods in the Democratic Republic of Congo to develop and validate a locally-derived measure of postpartum depression (<em>Maladi ya Souci</em>, a syndrome of worry) that contained some EPDS items. The authors found that their 16-item local syndrome scale performed similarly to a shorter version of the EPDS and another Western scale in terms of diagnostic accuracy.</p>
-<p>Unlike Bass et al. <span class="citation" data-cites="Bass:2008">[2]</span> who found that their locally-derived scale included all of the diagnostic symptom categories for MDD, we found that the best combination of items on the PDEPS deviates somewhat from DSM-5 criteria. For instance, one of the most discriminating items, “Feeling like you just want to go back to your maternal home”, was suggested by the expert panel of Kenyan mental health professionals who are trained from a Western model but whose practice is informed by local customs. This particular custom refers to the tradition that women often leave their maternal home upon marriage and resettle in their husband’s village. Wanting to go back to your maternal home would signal difficulty coping with present circumstances. Given the culturally-anchored nature of this item, some adaptation might be required if the PDEPS is to be used in other settings where this behavior is not a custom. Other PDEPS items more clearly reflect the universal nature of depression, such as “feeling hopeless”, “feeling anxious or worried for no good reason”, and “crying because of sadness”—the latter two overlapping directly with the EPDS.</p>
-<p>The study by Bass et al. <span class="citation" data-cites="Bass:2008">[2]</span> is also an interesting comparison because the authors did not rely on standard clinical interviews to assess caseness. Instead, they considered a woman a ‘case’ if a key informant identified her as suffering from the local syndrome <em>and</em> if the woman self-identified as having the syndrome. In addition to using the SCID-5-RV as a reference criterion, we also separately examined ‘local’ cases defined by concordance between a counselor’s clinical judgment—not bound by DSM-5 criteria—and the woman’s self-report of poor functioning. As far as we know, ours is the first study to compare Western and local approaches to define caseness.</p>
-<p>Interestingly, both definitions of caseness lead to a similar overall estimate of prevalence: 5.2 percent using a DSM-5 gold-standard interview and 6.2 percent using a local definition based on concordance between counselor clinical judgment and client self-assessment. These results are internally consistent, but represent a divergence from other published prevalence estimates. For instance, a systematic review by Villegas et al. <span class="citation" data-cites="Villegas:2011">[6]</span> reported a point estimate of 31.3 percent in developing countries (95%CI 21.3 to 43.5). Another systematic review of common perinatal mental disorders in low- and lower-middle-income countries—so a broader scope than just depressive disorders—estimated an overall prevalence of 18.6 percent <span class="citation" data-cites="Fisher:2012">[7]</span>. A third systematic review limited to studies of African samples—but none conducted in Kenya—reported a prevalence of depression of 11.3 percent during the antenatal period (95%CI 9.5 to 13.1) and 18.3 percent during the postnatal period <span class="citation" data-cites="Sawyer:2010">[8]</span>.</p>
-<p>If we relax the requirement for concordance and consider only counselor clinical judgment, our estimate of prevalence increases to 14.5 percent. This might be most comparable to the Fisher et al. <span class="citation" data-cites="Fisher:2012">[7]</span> estimate of 18.6 percent for common perinatal mental disorders, assuming that counselors in our study might have considered a broader range of symptoms than strictly depression when labeling cases when relying on their clinical judgment. In any case, this higher estimate should probably be considered an upper-bound on prevalence with an understanding that the DSM-5 gold-standard and the local concordance gold-standard produces estimates half as large.</p>
+<p>We developed the PDEPS through a hybrid emic and etic approach that blended Western psychiatric concepts with locally derived idioms of distress. This work drew inspiration from several previous studies that took a similar approach to combining Western and indigenous concepts <span class="citation">[2–5]</span>. In particular, we can compare our results to Bass et al. <span class="citation">[2]</span> who used similar methods in the Democratic Republic of Congo to develop and validate a locally-derived measure of postpartum depression (<em>Maladi ya Souci</em>, a syndrome of worry) that contained some EPDS items. The authors found that their 16-item local syndrome scale performed similarly to a shorter version of the EPDS and another Western scale in terms of diagnostic accuracy.</p>
+<p>Unlike Bass et al. <span class="citation">[2]</span> who found that their locally-derived scale included all of the diagnostic symptom categories for MDD, we found that the best combination of items on the PDEPS deviates somewhat from DSM-5 criteria. For instance, one of the most discriminating items, “Feeling like you just want to go back to your maternal home”, was suggested by the expert panel of Kenyan mental health professionals who are trained from a Western model but whose practice is informed by local customs. This particular custom refers to the tradition that women often leave their maternal home upon marriage and resettle in their husband’s village. Wanting to go back to your maternal home would signal difficulty coping with present circumstances. Given the culturally-anchored nature of this item, some adaptation might be required if the PDEPS is to be used in other settings where this behavior is not a custom. Other PDEPS items more clearly reflect the universal nature of depression, such as “feeling hopeless”, “feeling anxious or worried for no good reason”, and “crying because of sadness”—the latter two overlapping directly with the EPDS.</p>
+<p>The study by Bass et al. <span class="citation">[2]</span> is also an interesting comparison because the authors did not rely on standard clinical interviews to assess caseness. Instead, they considered a woman a ‘case’ if a key informant identified her as suffering from the local syndrome <em>and</em> if the woman self-identified as having the syndrome. In addition to using the SCID-5-RV as a reference criterion, we also separately examined ‘local’ cases defined by concordance between a counselor’s clinical judgment—not bound by DSM-5 criteria—and the woman’s self-report of poor functioning. As far as we know, ours is the first study to compare Western and local approaches to define caseness.</p>
+<p>Interestingly, both definitions of caseness lead to a similar overall estimate of prevalence: 5.2 percent using a DSM-5 gold-standard interview and 6.2 percent using a local definition based on concordance between counselor clinical judgment and client self-assessment. These results are internally consistent, but represent a divergence from other published prevalence estimates. For instance, a systematic review by Villegas et al. <span class="citation">[6]</span> reported a point estimate of 31.3 percent in developing countries (95%CI 21.3 to 43.5). Another systematic review of common perinatal mental disorders in low- and lower-middle-income countries—so a broader scope than just depressive disorders—estimated an overall prevalence of 18.6 percent <span class="citation">[7]</span>. A third systematic review limited to studies of African samples—but none conducted in Kenya—reported a prevalence of depression of 11.3 percent during the antenatal period (95%CI 9.5 to 13.1) and 18.3 percent during the postnatal period <span class="citation">[8]</span>.</p>
+<p>If we relax the requirement for concordance and consider only counselor clinical judgment, our estimate of prevalence increases to 14.5 percent. This might be most comparable to the Fisher et al. <span class="citation">[7]</span> estimate of 18.6 percent for common perinatal mental disorders, assuming that counselors in our study might have considered a broader range of symptoms than strictly depression when labeling cases when relying on their clinical judgment. In any case, this higher estimate should probably be considered an upper-bound on prevalence with an understanding that the DSM-5 gold-standard and the local concordance gold-standard produces estimates half as large.</p>
 <p>While this study affirms the validity of screening for perinatal depression, it also raises an interesting question about how to implement screening at scale. Low literacy rates in places like rural Kenya preclude a complete reliance on self-administration. Nurse-administered screenings are of course possible at primary health centers, but this approach is limited by other demands on staff time and the need for additional training. These are barriers that can be overcome, however there is still the issue that facility-based screening will not reach all pregnant women and new mothers, particularly in settings were antenatal care is not universal and where rates of facility delivery remain low. To increase coverage, we should consider how automated screenings delivered via phone calls could help to overcome all of these barriers.</p>
-<p>We examined the test-retest reliability of automated phone administration and found that retest surveys conducted via interactive voice response were somewhat less reliable than in-person retest surveys administered by the same enumerator. However, we hypothesized that the private nature of automated phone administration would lead to more endorsement of depression symptoms, thus making the phone retests appear less reliable. This is what we found, and it is consistent with other research on interactive voice response systems. Kobak et al. <span class="citation" data-cites="Kobak:1999">[9]</span> found that U.S. patients reported more embarrassment in acknowledging depression symptoms to a live clinician compared to an automated voice system, and Lieberman et al. <span class="citation" data-cites="Lieberman:2012">[10]</span> reviewed the use of automated voice screening for medical research and concluded that automated interviews give patients a sense of anonymity that leads to increased reporting compared to in-person interviews. More work is needed to understand the potential uses of and barriers to automated screening at scale in low-income countries, particularly for rural health systems.</p>
-<p>Phone screenings would also offer the opportunity to assess voice samples. All of the current methods of screening for depression, assessing severity, and monitoring response to treatment rely on either patient-report or clinician judgment, both of which can be subjective and error prone. The search for more objective biomarkers of depression has led researchers to study how depression affects speech. Findings from a recent randomized controlled trial in the U.S. demonstrated that it is feasible to obtain valid measures of depression severity and response to treatment via the analysis of vocal recordings captured via an automated phone system <span class="citation" data-cites="Mundt:2012">[11]</span>. As part of a Phase 4 randomized trial of treatments for Major Depression, 105 patients assigned to treatment arms provided speech samples in addition to completing several clinical assessments of depression severity and response to treatment. The study found that changes in speech patterns were associated with clinical outcomes, suggesting that there may be clinically important vocal biomarkers of depression. This represents a potentially important new direction for research in wide-scale depression screening in low-income settings.</p>
-</section>
-<section id="references" class="level1 unnumbered">
+<p>We examined the test-retest reliability of automated phone administration and found that retest surveys conducted via interactive voice response were somewhat less reliable than in-person retest surveys administered by the same enumerator. However, we hypothesized that the private nature of automated phone administration would lead to more endorsement of depression symptoms, thus making the phone retests appear less reliable. This is what we found, and it is consistent with other research on interactive voice response systems. Kobak et al. <span class="citation">[9]</span> found that U.S. patients reported more embarrassment in acknowledging depression symptoms to a live clinician compared to an automated voice system, and Lieberman et al. <span class="citation">[10]</span> reviewed the use of automated voice screening for medical research and concluded that automated interviews give patients a sense of anonymity that leads to increased reporting compared to in-person interviews. More work is needed to understand the potential uses of and barriers to automated screening at scale in low-income countries, particularly for rural health systems.</p>
+<p>Phone screenings would also offer the opportunity to assess voice samples. All of the current methods of screening for depression, assessing severity, and monitoring response to treatment rely on either patient-report or clinician judgment, both of which can be subjective and error prone. The search for more objective biomarkers of depression has led researchers to study how depression affects speech. Findings from a recent randomized controlled trial in the U.S. demonstrated that it is feasible to obtain valid measures of depression severity and response to treatment via the analysis of vocal recordings captured via an automated phone system <span class="citation">[11]</span>. As part of a Phase 4 randomized trial of treatments for Major Depression, 105 patients assigned to treatment arms provided speech samples in addition to completing several clinical assessments of depression severity and response to treatment. The study found that changes in speech patterns were associated with clinical outcomes, suggesting that there may be clinically important vocal biomarkers of depression. This represents a potentially important new direction for research in wide-scale depression screening in low-income settings.</p>
+</div>
+<div id="references" class="section level1 unnumbered">
 <h1>References</h1>
 <div id="refs" class="references">
 <div id="ref-Tsai:2013">
@@ -425,7 +501,7 @@ Green, E.P. (2017). PDEPS data repository. <a href="https://zenodo.org/badge/lat
 <p>[11] Mundt JC, Vogel AP, Feltner DE, Lenderking WR. Vocal acoustic biomarkers of depression severity and treatment response. Biological Psychiatry 2012;72:580–7.</p>
 </div>
 </div>
-</section>
+</div>
 
 
 
@@ -445,6 +521,49 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
